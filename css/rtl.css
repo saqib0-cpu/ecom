@@ -1,0 +1,234 @@
+/* ==========================================================================
+   MAISON FLEURISTE DUBAI – ARABIC & RTL STYLESHEET
+   Flawless bidirectional layout, Cairo typography, mirrored components
+   ========================================================================== */
+
+html[dir="rtl"],
+body.is-rtl {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+body.is-rtl h1,
+body.is-rtl h2,
+body.is-rtl h3,
+body.is-rtl h4,
+body.is-rtl h5,
+body.is-rtl h6 {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+html[dir="rtl"] .section-tag,
+html[dir="rtl"] .hero-badge-pill,
+html[dir="rtl"] .btn-primary,
+html[dir="rtl"] .btn-secondary,
+html[dir="rtl"] .collection-explore-link {
+  letter-spacing: normal;
+  font-family: var(--font-arabic);
+}
+
+/* Header & Nav */
+html[dir="rtl"] .brand-logo-wrap {
+  align-items: center;
+}
+
+html[dir="rtl"] .badge-count {
+  right: auto;
+  left: 2px;
+}
+
+/* Hero Section */
+html[dir="rtl"] .hero-title span.gold-italic {
+  font-family: var(--font-arabic);
+  font-style: normal;
+}
+
+html[dir="rtl"] .hero-flower-live-card {
+  left: auto;
+  right: 28px;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-flower-picker {
+  right: auto;
+  left: 28px;
+}
+
+html[dir="rtl"] .hero-slide-nav-btn.prev {
+  left: auto;
+  right: 16px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+html[dir="rtl"] .hero-slide-nav-btn.next {
+  right: auto;
+  left: 16px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+html[dir="rtl"] .verified-patron-badge {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .hero-flower-live-card {
+    right: 14px;
+    left: 14px;
+  }
+  html[dir="rtl"] .hero-flower-picker {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+/* Product Cards */
+html[dir="rtl"] .card-badges {
+  left: auto;
+  right: 14px;
+}
+
+html[dir="rtl"] .btn-card-wishlist {
+  right: auto;
+  left: 14px;
+}
+
+html[dir="rtl"] .collection-card:hover .collection-explore-link svg {
+  transform: translateX(-4px);
+}
+
+/* Slide-over Cart Drawer */
+html[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.25);
+}
+
+html[dir="rtl"] .cart-drawer.active {
+  transform: translateX(0);
+}
+
+/* Mobile Nav Drawer */
+html[dir="rtl"] .mobile-nav-drawer {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25);
+}
+
+html[dir="rtl"] .mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+/* Modal close button */
+html[dir="rtl"] .modal-close-btn {
+  right: auto;
+  left: 18px;
+}
+
+/* Toast container */
+html[dir="rtl"] .maison-toast-container {
+  right: auto;
+  left: 30px;
+}
+
+/* Floating WhatsApp button */
+html[dir="rtl"] .floating-whatsapp-btn {
+  left: auto;
+  right: 30px;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .floating-whatsapp-btn {
+    right: 20px;
+  }
+}
+
+/* Breadcrumbs */
+html[dir="rtl"] .breadcrumb-nav svg {
+  transform: scaleX(-1);
+}
+
+/* Footer Links hover */
+html[dir="rtl"] .footer-col ul li a:hover {
+  padding-inline-start: 4px;
+}
+
+/* PDP Size Buttons */
+html[dir="rtl"] .pdp-size-btn {
+  text-align: right;
+}
+
+/* Tracking Step Visualizer in RTL */
+html[dir="rtl"] .tracking-steps-timeline::before {
+  right: 40px;
+  left: 40px;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .step-label {
+    text-align: right;
+  }
+}
+
+/* Checkout inputs & select arrows */
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  text-align: right;
+}
+
+html[dir="rtl"] .checkout-item-badge {
+  right: auto;
+  left: -6px;
+}
+
+
+/* RTL Dropdown & Swatch Adjustments */
+html[dir="rtl"] .luxury-dropdown-menu {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) translateY(14px);
+}
+
+html[dir="rtl"] .has-dropdown:hover .luxury-dropdown-menu {
+  transform: translateX(50%) translateY(0);
+}
+
+html[dir="rtl"] .hero-flower-picker {
+  right: auto;
+  left: 30px;
+}
+
+/* Khan 4-Flower Floating Botanical Mirroring in RTL */
+html[dir="rtl"] .khan-flower-tl {
+  left: auto;
+  right: -40px;
+}
+
+html[dir="rtl"] .khan-flower-tr {
+  right: auto;
+  left: -35px;
+}
+
+html[dir="rtl"] .khan-flower-bl {
+  left: auto;
+  right: 10px;
+}
+
+html[dir="rtl"] .khan-flower-br {
+  right: auto;
+  left: 15px;
+}
+

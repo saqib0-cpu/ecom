@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Checkout | Maison Fleuriste Dubai</title>
+  <meta name="description" content="Complete your luxury flower order with secure checkout and white-glove Dubai chilled delivery." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span class="announcement-text" data-i18n="announcement_1">
+        ✨ Luxury Flowers Hand-Delivered Across Dubai | Same-Day Delivery Available
+      </span>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Maison Fleuriste Dubai">
+        <span class="brand-logo-crest">✤</span>
+        <div class="brand-text-column">
+          <span class="brand-main-title" data-i18n="brand_name">MAISON FLEURISTE</span>
+          <span class="brand-sub-tagline" data-i18n="brand_subtitle">DUBAI FLORAL ATELIER</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="lang-switcher-pill">
+          <button type="button" class="lang-switch-btn active" data-lang="en">EN</button>
+          <span style="color: var(--border-light);">|</span>
+          <button type="button" class="lang-switch-btn" data-lang="ar">العربية</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero-banner" style="padding: 50px 0 40px 0;">
+    <div class="container page-hero-content">
+      <span class="page-hero-badge" data-i18n="checkout_title">Secure Luxury Checkout</span>
+      <h1 class="page-hero-title" data-i18n="checkout_title">Secure Luxury Checkout</h1>
+      <p class="page-hero-subtitle" data-i18n="checkout_subtitle">Dubai White-Glove Delivery Experience</p>
+    </div>
+  </section>
+
+  <!-- Main Checkout Section -->
+  <main class="checkout-section" id="checkout-page-container">
+    <div class="container">
+      <div class="checkout-grid">
+        <!-- Left: Form Steps -->
+        <form id="checkout-form" class="checkout-steps-form">
+          <!-- Step 1: Customer Details -->
+          <div class="checkout-step-card">
+            <h2 class="step-card-title" data-i18n="step_1_title">1. Recipient & Contact Details</h2>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkout-name" data-i18n="lbl_full_name">Full Name *</label>
+                <input type="text" id="checkout-name" placeholder="e.g. Fatima Al-Mansoor" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-phone" data-i18n="lbl_phone">UAE Mobile Phone *</label>
+                <input type="tel" id="checkout-phone" placeholder="e.g. +971 50 123 4567" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="checkout-email" data-i18n="lbl_email">Email Address *</label>
+              <input type="email" id="checkout-email" placeholder="e.g. fatima@example.com" required />
+            </div>
+          </div>
+
+          <!-- Step 2: Delivery Address in Dubai -->
+          <div class="checkout-step-card">
+            <h2 class="step-card-title" data-i18n="step_2_title">2. Dubai Delivery Address</h2>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkout-emirate" data-i18n="lbl_emirate">Emirate</label>
+                <select id="checkout-emirate" disabled>
+                  <option value="Dubai" selected>Dubai (دبي)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="checkout-dubai-area" data-i18n="lbl_dubai_area">Dubai Area / Neighborhood *</label>
+                <select id="checkout-dubai-area" required>
+                  <!-- Injected from DUBAI_AREAS -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkout-building" data-i18n="lbl_building">Building Name / Villa Number *</label>
+                <input type="text" id="checkout-building" placeholder="e.g. Burj Crown / Villa 14" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-street" data-i18n="lbl_street">Street Name / Landmark *</label>
+                <input type="text" id="checkout-street" placeholder="e.g. Sheikh Mohammed bin Rashid Blvd" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-apt" data-i18n="lbl_apt">Apartment / Suite (Optional)</label>
+              <input type="text" id="checkout-apt" placeholder="e.g. Apt 1402" />
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-notes" data-i18n="lbl_special_instructions">Delivery Instructions</label>
+              <textarea id="checkout-notes" rows="2" placeholder="e.g. Leave at concierge reception, surprise birthday delivery, gate access code..."></textarea>
+            </div>
+          </div>
+
+          <!-- Step 3: Date & Time Schedule -->
+          <div class="checkout-step-card">
+            <h2 class="step-card-title" data-i18n="step_3_title">3. Delivery Schedule</h2>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkout-delivery-date" data-i18n="lbl_delivery_date">Preferred Date *</label>
+                <input type="date" id="checkout-delivery-date" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-delivery-slot" data-i18n="lbl_delivery_slot">Delivery Time Slot *</label>
+                <select id="checkout-delivery-slot" required>
+                  <option value="Morning: 09:00 AM - 01:00 PM" data-i18n="slot_morning">Morning: 09:00 AM - 01:00 PM</option>
+                  <option value="Afternoon: 01:00 PM - 05:00 PM" data-i18n="slot_afternoon">Afternoon: 01:00 PM - 05:00 PM</option>
+                  <option value="Evening VIP: 05:00 PM - 09:00 PM" selected data-i18n="slot_evening">Evening VIP: 05:00 PM - 09:00 PM</option>
+                  <option value="Late Night: 09:00 PM - 11:30 PM" data-i18n="slot_late">Late Night Surprise: 09:00 PM - 11:30 PM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Payment Methods -->
+          <div class="checkout-step-card">
+            <h2 class="step-card-title" data-i18n="step_4_title">4. Secure Payment Method</h2>
+
+            <div class="payment-methods-list">
+              <!-- Apple Pay Option -->
+              <div class="payment-method-item">
+                <div class="payment-method-header">
+                  <label>
+                    <input type="radio" name="payment_method" value="apple_pay" />
+                    <span data-i18n="payment_apple_pay">Apple Pay</span>
+                  </label>
+                  <span class="pay-badge">Apple Pay</span>
+                </div>
+                <div class="payment-panel" id="panel-apple_pay">
+                  <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 14px;" data-i18n="payment_apple_pay_sub">
+                    Complete your order instantly using Face ID or Touch ID with Apple Pay.
+                  </p>
+                  <div class="btn-apple-pay-sim">
+                    <span>Pay</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credit Card Option -->
+              <div class="payment-method-item">
+                <div class="payment-method-header">
+                  <label>
+                    <input type="radio" name="payment_method" value="card" checked />
+                    <span data-i18n="payment_card">Credit / Debit Card</span>
+                  </label>
+                  <div style="display:flex; gap:6px;">
+                    <span class="pay-badge">Visa</span>
+                    <span class="pay-badge">Mastercard</span>
+                    <span class="pay-badge">AMEX</span>
+                  </div>
+                </div>
+                <div class="payment-panel active" id="panel-card">
+                  <div class="form-group">
+                    <label for="card-holder-input" data-i18n="card_holder">Cardholder Name</label>
+                    <input type="text" id="card-holder-input" placeholder="Name as embossed on card" value="Fatima Al-Mansoor" />
+                  </div>
+                  <div class="form-group">
+                    <label for="card-number-input" data-i18n="card_number">Card Number</label>
+                    <input type="text" id="card-number-input" placeholder="4000 1234 5678 9010" maxlength="19" value="4532 •••• •••• 8821" />
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label for="card-expiry-input" data-i18n="card_expiry">Expiry Date</label>
+                      <input type="text" id="card-expiry-input" placeholder="MM / YY" maxlength="7" value="12 / 28" />
+                    </div>
+                    <div class="form-group">
+                      <label for="card-cvv-input" data-i18n="card_cvv">CVV / CVC</label>
+                      <input type="password" id="card-cvv-input" placeholder="•••" maxlength="4" value="882" />
+                    </div>
+                  </div>
+                  <p style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 6px;" data-i18n="checkout_security_note">
+                    🔒 Processed via UAE Central Bank compliant PCI-DSS 256-bit gateway.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tabby Option -->
+              <div class="payment-method-item">
+                <div class="payment-method-header">
+                  <label>
+                    <input type="radio" name="payment_method" value="tabby" />
+                    <span data-i18n="payment_tabby">Tabby / Tamara</span>
+                  </label>
+                  <span class="pay-badge" style="background: #29E086; color: #000;">Tabby</span>
+                </div>
+                <div class="payment-panel" id="panel-tabby">
+                  <div class="tabby-badge-box">
+                    <strong>Split in 4 interest-free payments of <span id="tabby-installment-amount">AED 75</span></strong>
+                    <p style="font-size: 0.8125rem; margin-top: 4px;">No hidden interest or fees. Compliant with UAE Sharia guidelines.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cash / Card on Delivery Option -->
+              <div class="payment-method-item">
+                <div class="payment-method-header">
+                  <label>
+                    <input type="radio" name="payment_method" value="cod" />
+                    <span data-i18n="payment_cod">Cash / Card on Delivery</span>
+                  </label>
+                  <span class="pay-badge">COD</span>
+                </div>
+                <div class="payment-panel" id="panel-cod">
+                  <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="payment_cod_sub">
+                    Pay upon hand-delivery via cash or wireless card terminal directly to our uniformed courier.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Complete Order Button -->
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 30px; height: 54px; font-size: 1rem;" data-i18n="btn_place_order">
+              Complete & Confirm Order
+            </button>
+          </div>
+        </form>
+
+        <!-- Right: Order Summary Sidebar -->
+        <aside class="checkout-summary-card">
+          <h2 class="summary-title" data-i18n="order_summary_title">Order Summary</h2>
+
+          <div class="checkout-summary-items-list" id="checkout-summary-items"></div>
+
+          <div class="drawer-summary-row">
+            <span data-i18n="cart_subtotal">Subtotal</span>
+            <span id="chk-subtotal">AED 0</span>
+          </div>
+          <div class="drawer-summary-row" id="chk-discount-row" style="display: none; color: #1F7A47; font-weight: 600;">
+            <span>Privilege Discount</span>
+            <span id="chk-discount">- AED 0</span>
+          </div>
+          <div class="drawer-summary-row">
+            <span data-i18n="cart_delivery">Dubai Delivery</span>
+            <span id="chk-delivery">Complimentary</span>
+          </div>
+          <div class="drawer-summary-row">
+            <span data-i18n="cart_vat">VAT (5% UAE)</span>
+            <span id="chk-vat">AED 0</span>
+          </div>
+          <div class="drawer-summary-row total-row">
+            <span data-i18n="cart_total">Estimated Total</span>
+            <span id="chk-total">AED 0</span>
+          </div>
+
+          <div style="margin-top: 24px; padding: 16px; background: var(--bg-primary); border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-size: 0.8125rem;">
+            <strong style="display:block; margin-bottom: 4px; color: var(--emerald-dark);">Dubai Delivery Guarantee</strong>
+            <p style="color: var(--text-muted);">
+              All flower arrangements are transported in climate-controlled Mercedes-Benz chiller vans at 8°C.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Complete Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar" style="border: none; padding: 0;">
+        <p data-i18n="footer_rights">© 2026 Maison Fleuriste Dubai. All Rights Reserved.</p>
+        <div class="payment-badges-row">
+          <span class="pay-badge">Apple Pay</span>
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">Tabby</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

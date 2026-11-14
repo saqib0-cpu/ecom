@@ -1,0 +1,21 @@
+{
+  "name": "maison-fleuriste-dubai",
+  "version": "1.0.0",
+  "description": "Premium Luxury Flower E-Commerce Website targeting Dubai, UAE",
+  "private": true,
+  "scripts": {
+    "dev": "python -m http.server 5500",
+    "start": "npx serve .",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "flower-ecommerce",
+    "luxury-flowers",
+    "dubai",
+    "uae",
+    "bilingual",
+    "arabic-rtl"
+  ],
+  "author": "Maison Fleuriste Dubai",
+  "license": "UNLICENSED"
+}
